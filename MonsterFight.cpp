@@ -23,7 +23,14 @@ Monster monsters[5] = {
 // This function takes a monster and prints it's name and hitpoints
 // to the console, and prints "DEAD" if it has negative HP
 void printMonsterStats(Monster m){
-    // ❓❓ Lab Question 1 ❓❓
+    cout << m.name << ": "; 
+    cout << m.hitpoints;
+    if (m.hitpoints <=0){
+        cout << " DEAD!";
+    }
+    cout << endl;
+
+
 }
 
 //Fight two monsters!
@@ -42,12 +49,16 @@ void fight(Monster m1, Monster m2){
     } else {
         cout << "It's a tie!" << endl;
     }
+    printMonsterStats(m1);
+    printMonsterStats(m2);
 }
 
 void main(){
 
-    //❓❓ Lab Question 2
+    //❓❓ Lab Question 5
     //Add your function call here:
+
+    fight(monsters[1],monsters[3]);
 
     //Comment out this line
     printMonsterStats(monsters[3]);
